@@ -3,131 +3,200 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="A joyful, emotional birthday website made for a beloved twin sister."
-    />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Happy Birthday, My Twin Sister</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Multi-step form</title>
   </head>
   <body>
-    <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+    <main class="app" aria-label="Multi-step subscription form">
+      <aside class="sidebar" aria-label="Progress">
+        <ol class="step-list">
+          <li class="step-item is-active" data-step-item="1">
+            <span class="step-number">1</span>
+            <span class="step-copy">
+              <span class="step-label">Step 1</span>
+              <span class="step-title">Your info</span>
+            </span>
+          </li>
+          <li class="step-item" data-step-item="2">
+            <span class="step-number">2</span>
+            <span class="step-copy">
+              <span class="step-label">Step 2</span>
+              <span class="step-title">Select plan</span>
+            </span>
+          </li>
+          <li class="step-item" data-step-item="3">
+            <span class="step-number">3</span>
+            <span class="step-copy">
+              <span class="step-label">Step 3</span>
+              <span class="step-title">Add-ons</span>
+            </span>
+          </li>
+          <li class="step-item" data-step-item="4">
+            <span class="step-number">4</span>
+            <span class="step-copy">
+              <span class="step-label">Step 4</span>
+              <span class="step-title">Summary</span>
+            </span>
+          </li>
+        </ol>
+      </aside>
 
-    <main>
-      <section class="hero" aria-labelledby="birthday-title">
-        <div class="hero-glow" aria-hidden="true"></div>
-        <div class="hero-art-wrap">
-          <img
-            class="hero-art"
-            src="./assets/twin-birthday-illustration.svg"
-            alt="Two sisters celebrating a birthday with cake, balloons, flowers, and stars"
-          />
-        </div>
+      <form class="form-card" novalidate>
+        <div class="form-body">
+          <section class="form-step is-active" data-step-panel="1" aria-labelledby="personal-title">
+            <header class="step-header">
+              <h1 id="personal-title">Personal info</h1>
+              <p>Please provide your name, email address, and phone number.</p>
+            </header>
 
-        <div class="hero-content">
-          <p class="kicker">For the one who arrived with me</p>
-          <h1 id="birthday-title">Happy Birthday, My Twin Sister</h1>
-          <p class="hero-message">
-            Today is not just your birthday. It is a reminder that life gave me a forever friend from the very
-            beginning, a mirror for my laughter, and a heart I will always recognize.
-          </p>
-
-          <div class="hero-actions" aria-label="Birthday actions">
-            <button class="primary-action" type="button" data-celebrate>
-              Celebrate Her
-            </button>
-            <a class="soft-action" href="#letter">Read My Heart</a>
-          </div>
-        </div>
-
-        <a class="scroll-cue" href="#letter" aria-label="Scroll to birthday letter">
-          <span></span>
-        </a>
-      </section>
-
-      <section class="letter-section" id="letter" aria-labelledby="letter-title">
-        <div class="section-shell">
-          <div class="letter-card">
-            <p class="section-kicker">A birthday letter</p>
-            <h2 id="letter-title">To my other half</h2>
-            <div class="letter-copy">
-              <p>
-                From our first breath, I have never had to walk through this world alone. You have been there in
-                ways people cannot always see: in the jokes only we understand, in the quiet strength you carry,
-                in the way your happiness can lift a whole room.
-              </p>
-              <p>
-                I hope this new year gives you the softness you deserve, the courage you already have, and the
-                beautiful surprises you have been praying for. You are loved deeply, not just today, but in every
-                ordinary moment that reminds me how lucky I am to call you my twin.
-              </p>
-              <p>
-                May your smile stay bright, your dreams keep growing, and your heart always know that you are
-                cherished beyond words.
-              </p>
+            <div class="field" data-field="name">
+              <div class="field-top">
+                <label for="name">Name</label>
+                <span class="error-message" id="name-error"></span>
+              </div>
+              <input id="name" name="name" type="text" placeholder="e.g. Stephen King" autocomplete="name" required />
             </div>
-            <p class="signature">With all my love, your twin.</p>
-          </div>
-        </div>
-      </section>
 
-      <section class="joy-section" aria-labelledby="joy-title">
-        <div class="section-shell">
-          <p class="section-kicker">Reasons you are celebrated</p>
-          <h2 id="joy-title">All the light you bring</h2>
+            <div class="field" data-field="email">
+              <div class="field-top">
+                <label for="email">Email Address</label>
+                <span class="error-message" id="email-error"></span>
+              </div>
+              <input id="email" name="email" type="email" placeholder="e.g. stephenking@lorem.com" autocomplete="email" required />
+            </div>
 
-          <div class="joy-grid">
-            <article class="joy-card">
-              <span class="joy-icon" aria-hidden="true">✦</span>
-              <h3>Your laughter</h3>
-              <p>It turns normal days into memories and reminds everyone around you that joy can be simple.</p>
-            </article>
-            <article class="joy-card">
-              <span class="joy-icon" aria-hidden="true">♡</span>
-              <h3>Your heart</h3>
-              <p>You love with tenderness, loyalty, and a kind of warmth that people remember.</p>
-            </article>
-            <article class="joy-card">
-              <span class="joy-icon" aria-hidden="true">★</span>
-              <h3>Your strength</h3>
-              <p>You keep showing up, glowing through challenges, and becoming even more beautifully yourself.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+            <div class="field" data-field="phone">
+              <div class="field-top">
+                <label for="phone">Phone Number</label>
+                <span class="error-message" id="phone-error"></span>
+              </div>
+              <input id="phone" name="phone" type="tel" placeholder="e.g. +1 234 567 890" autocomplete="tel" required />
+            </div>
+          </section>
 
-      <section class="wish-section" aria-labelledby="wish-title">
-        <div class="wish-visual" aria-hidden="true">
-          <div class="cake">
-            <span class="flame"></span>
-            <span class="candle"></span>
-            <span class="cake-top"></span>
-            <span class="cake-middle"></span>
-            <span class="cake-bottom"></span>
-          </div>
+          <section class="form-step" data-step-panel="2" aria-labelledby="plan-title">
+            <header class="step-header">
+              <h1 id="plan-title">Select your plan</h1>
+              <p>You have the option of monthly or yearly billing.</p>
+            </header>
+
+            <fieldset class="plan-options" aria-label="Plans">
+              <legend class="sr-only">Choose a plan</legend>
+              <label class="plan-card">
+                <input type="radio" name="plan" value="arcade" checked />
+                <img src="./assets/images/icon-arcade.svg" alt="" />
+                <span>
+                  <strong>Arcade</strong>
+                  <span class="plan-price" data-plan-price="arcade">$9/mo</span>
+                  <span class="plan-bonus">2 months free</span>
+                </span>
+              </label>
+
+              <label class="plan-card">
+                <input type="radio" name="plan" value="advanced" />
+                <img src="./assets/images/icon-advanced.svg" alt="" />
+                <span>
+                  <strong>Advanced</strong>
+                  <span class="plan-price" data-plan-price="advanced">$12/mo</span>
+                  <span class="plan-bonus">2 months free</span>
+                </span>
+              </label>
+
+              <label class="plan-card">
+                <input type="radio" name="plan" value="pro" />
+                <img src="./assets/images/icon-pro.svg" alt="" />
+                <span>
+                  <strong>Pro</strong>
+                  <span class="plan-price" data-plan-price="pro">$15/mo</span>
+                  <span class="plan-bonus">2 months free</span>
+                </span>
+              </label>
+            </fieldset>
+
+            <div class="billing-toggle" aria-label="Billing period">
+              <span data-billing-label="monthly">Monthly</span>
+              <label class="switch" for="billing-cycle">
+                <input id="billing-cycle" type="checkbox" />
+                <span class="switch-track"></span>
+              </label>
+              <span data-billing-label="yearly">Yearly</span>
+            </div>
+          </section>
+
+          <section class="form-step" data-step-panel="3" aria-labelledby="addons-title">
+            <header class="step-header">
+              <h1 id="addons-title">Pick add-ons</h1>
+              <p>Add-ons help enhance your gaming experience.</p>
+            </header>
+
+            <fieldset class="addon-options" aria-label="Add-ons">
+              <legend class="sr-only">Choose add-ons</legend>
+              <label class="addon-card">
+                <input type="checkbox" name="addons" value="online" />
+                <span class="custom-check" aria-hidden="true"></span>
+                <span class="addon-copy">
+                  <strong>Online service</strong>
+                  <span>Access to multiplayer games</span>
+                </span>
+                <span class="addon-price" data-addon-price="online">+$1/mo</span>
+              </label>
+
+              <label class="addon-card">
+                <input type="checkbox" name="addons" value="storage" />
+                <span class="custom-check" aria-hidden="true"></span>
+                <span class="addon-copy">
+                  <strong>Larger storage</strong>
+                  <span>Extra 1TB of cloud save</span>
+                </span>
+                <span class="addon-price" data-addon-price="storage">+$2/mo</span>
+              </label>
+
+              <label class="addon-card">
+                <input type="checkbox" name="addons" value="profile" />
+                <span class="custom-check" aria-hidden="true"></span>
+                <span class="addon-copy">
+                  <strong>Customizable Profile</strong>
+                  <span>Custom theme on your profile</span>
+                </span>
+                <span class="addon-price" data-addon-price="profile">+$2/mo</span>
+              </label>
+            </fieldset>
+          </section>
+
+          <section class="form-step" data-step-panel="4" aria-labelledby="summary-title">
+            <header class="step-header">
+              <h1 id="summary-title">Finishing up</h1>
+              <p>Double-check everything looks OK before confirming.</p>
+            </header>
+
+            <div class="summary-box">
+              <div class="summary-plan" id="summary-plan"></div>
+              <div class="summary-addons" id="summary-addons"></div>
+            </div>
+
+            <div class="summary-total">
+              <span id="total-label">Total (per month)</span>
+              <strong id="total-price">$9/mo</strong>
+            </div>
+          </section>
+
+          <section class="form-step thank-you" data-step-panel="5" aria-labelledby="thanks-title">
+            <img src="./assets/images/icon-thank-you.svg" alt="" />
+            <h1 id="thanks-title">Thank you!</h1>
+            <p>
+              Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need
+              support, please feel free to email us at support@loremgaming.com.
+            </p>
+          </section>
         </div>
 
-        <div class="wish-copy">
-          <p class="section-kicker">Make a wish</p>
-          <h2 id="wish-title">May this year be gentle and golden</h2>
-          <p>
-            I wish you peace that settles deep, love that never makes you question your worth, doors that open
-            with ease, and days that make you proud of how far you have come.
-          </p>
-          <button class="wish-button" type="button" data-wish>Light up the wish</button>
+        <div class="form-actions" data-actions>
+          <button class="btn btn-secondary" type="button" data-action="back">Go Back</button>
+          <button class="btn btn-primary" type="button" data-action="next">Next Step</button>
+          <button class="btn btn-confirm" type="button" data-action="confirm">Confirm</button>
         </div>
-      </section>
-
-      <section class="finale" aria-labelledby="finale-title">
-        <div class="finale-inner">
-          <p class="section-kicker">Today belongs to you</p>
-          <h2 id="finale-title">Happy Birthday, beautiful soul</h2>
-          <p>
-            You are my first friend, my lifelong blessing, and one of the brightest parts of my story.
-          </p>
-          <button class="primary-action" type="button" data-celebrate>One More Celebration</button>
-        </div>
-      </section>
+      </form>
     </main>
 
     <script src="./script.js"></script>
