@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A joyful, emotional birthday website made for a beloved twin sister."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Happy Birthday, My Twin Sister</title>
+  </head>
+  <body>
+    <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+    <main>
+      <section class="hero" aria-labelledby="birthday-title">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-art-wrap">
+          <img
+            class="hero-art"
+            src="./assets/twin-birthday-illustration.svg"
+            alt="Two sisters celebrating a birthday with cake, balloons, flowers, and stars"
+          />
+        </div>
+
+        <div class="hero-content">
+          <p class="kicker">For the one who arrived with me</p>
+          <h1 id="birthday-title">Happy Birthday, My Twin Sister</h1>
+          <p class="hero-message">
+            Today is not just your birthday. It is a reminder that life gave me a forever friend from the very
+            beginning, a mirror for my laughter, and a heart I will always recognize.
+          </p>
+
+          <div class="hero-actions" aria-label="Birthday actions">
+            <button class="primary-action" type="button" data-celebrate>
+              Celebrate Her
+            </button>
+            <a class="soft-action" href="#letter">Read My Heart</a>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#letter" aria-label="Scroll to birthday letter">
+          <span></span>
+        </a>
+      </section>
+
+      <section class="letter-section" id="letter" aria-labelledby="letter-title">
+        <div class="section-shell">
+          <div class="letter-card">
+            <p class="section-kicker">A birthday letter</p>
+            <h2 id="letter-title">To my other half</h2>
+            <div class="letter-copy">
+              <p>
+                From our first breath, I have never had to walk through this world alone. You have been there in
+                ways people cannot always see: in the jokes only we understand, in the quiet strength you carry,
+                in the way your happiness can lift a whole room.
+              </p>
+              <p>
+                I hope this new year gives you the softness you deserve, the courage you already have, and the
+                beautiful surprises you have been praying for. You are loved deeply, not just today, but in every
+                ordinary moment that reminds me how lucky I am to call you my twin.
+              </p>
+              <p>
+                May your smile stay bright, your dreams keep growing, and your heart always know that you are
+                cherished beyond words.
+              </p>
+            </div>
+            <p class="signature">With all my love, your twin.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="joy-section" aria-labelledby="joy-title">
+        <div class="section-shell">
+          <p class="section-kicker">Reasons you are celebrated</p>
+          <h2 id="joy-title">All the light you bring</h2>
+
+          <div class="joy-grid">
+            <article class="joy-card">
+              <span class="joy-icon" aria-hidden="true">✦</span>
+              <h3>Your laughter</h3>
+              <p>It turns normal days into memories and reminds everyone around you that joy can be simple.</p>
+            </article>
+            <article class="joy-card">
+              <span class="joy-icon" aria-hidden="true">♡</span>
+              <h3>Your heart</h3>
+              <p>You love with tenderness, loyalty, and a kind of warmth that people remember.</p>
+            </article>
+            <article class="joy-card">
+              <span class="joy-icon" aria-hidden="true">★</span>
+              <h3>Your strength</h3>
+              <p>You keep showing up, glowing through challenges, and becoming even more beautifully yourself.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="wish-section" aria-labelledby="wish-title">
+        <div class="wish-visual" aria-hidden="true">
+          <div class="cake">
+            <span class="flame"></span>
+            <span class="candle"></span>
+            <span class="cake-top"></span>
+            <span class="cake-middle"></span>
+            <span class="cake-bottom"></span>
+          </div>
+        </div>
+
+        <div class="wish-copy">
+          <p class="section-kicker">Make a wish</p>
+          <h2 id="wish-title">May this year be gentle and golden</h2>
+          <p>
+            I wish you peace that settles deep, love that never makes you question your worth, doors that open
+            with ease, and days that make you proud of how far you have come.
+          </p>
+          <button class="wish-button" type="button" data-wish>Light up the wish</button>
+        </div>
+      </section>
+
+      <section class="finale" aria-labelledby="finale-title">
+        <div class="finale-inner">
+          <p class="section-kicker">Today belongs to you</p>
+          <h2 id="finale-title">Happy Birthday, beautiful soul</h2>
+          <p>
+            You are my first friend, my lifelong blessing, and one of the brightest parts of my story.
+          </p>
+          <button class="primary-action" type="button" data-celebrate>One More Celebration</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
